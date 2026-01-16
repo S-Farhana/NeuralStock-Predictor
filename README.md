@@ -95,4 +95,21 @@ These parameters can be modified inside the code.
   - Mean Absolute Error (MAE)
 
 ---
+## Installation
+
+Install the required dependencies:
+
+```bash
+pip install numpy pandas matplotlib
+
+---
+
+## How to Run
+
+Run the Python script:
+
+```bash
+python stock_price_nn.py
+
+
 
