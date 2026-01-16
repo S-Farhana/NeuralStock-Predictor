@@ -1,133 +1,38 @@
-Stock Price Prediction Using Neural Network
+# Stock Price Prediction with Simple Feedforward Neural Network
 
-This project implements a feedforward neural network from scratch in Python to predict stock prices using historical data. It demonstrates essential concepts in time-series forecasting, neural network design, and data preprocessing, making it a strong example for a Data Scientist portfolio.
+A from-scratch implementation of a **single-hidden-layer neural network** for predicting next-day stock closing prices using historical OHLCV data.
 
-Project Highlights
+Compares **ReLU** vs **Tanh** activation functions, includes early stopping, min-max scaling, train/val/test split, model save/load, and nice matplotlib visualizations.
 
-Custom Feedforward Neural Network with one hidden layer
+https://github.com/YOUR-USERNAME/stock-price-nn-predictor  ← replace with your repo link
 
-Supports multiple activation functions: ReLU and Tanh
+## Features
 
-Early stopping to prevent overfitting and improve generalization
+- Pure NumPy neural network (no PyTorch/TensorFlow/Keras)
+- Supports ReLU and Tanh activations
+- Early stopping based on validation loss
+- Min-Max scaling with proper inverse transformation
+- Uses multiple features: Close, Open, High, Low, Volume
+- Look-back window (time-series sliding window)
+- GUI file picker (tkinter) to select CSV
+- Saves and loads model weights (.npz format)
+- Plots actual vs predicted prices + training/validation loss curves
+- Computes RMSE and MAE on test set
 
-Handles multiple stock features: Close, Open, High, Low, Volume
+## Demo Screenshots
 
-Min-max normalization for data preprocessing
+*(Add 2–4 screenshots here after running the code)*
 
-Look-back window approach for time-series prediction
+Examples:
+- Training & validation loss curves
+- Actual vs predicted prices (ReLU)
+- Actual vs predicted prices (Tanh)
 
-Manual train-validation-test split
+## Requirements
 
-Compute performance metrics: RMSE and MAE
-
-Save and load trained models as .npz files
-
-Interactive file selection using Tkinter GUI
-
-Visualization of predictions and loss curves for analysis
-
-Requirements
-
+```text
 Python 3.8+
-
-Libraries: numpy, pandas, matplotlib, tkinter (usually included with Python)
-
-Install missing packages:
-
-pip install numpy pandas matplotlib
-
-How to Use
-
-Clone the repository:
-
-git clone <your-repo-url>
-cd <repo-folder>
-
-
-Run the script:
-
-python stock_price_nn.py
-
-
-Select a CSV file containing historical stock data using the GUI.
-
-The script will automatically:
-
-Preprocess the data
-
-Train the neural network with ReLU and Tanh activations
-
-Generate predictions
-
-Plot actual vs predicted stock prices and loss curves
-
-Save trained models as .npz files
-
-CSV File Format
-
-The CSV file should contain the following columns:
-
-Close (target variable), Open, High, Low, Volume
-
-Example:
-
-Date	Open	High	Low	Close	Volume
-2023-01-01	100	105	98	102	1500000
-2023-01-02	102	108	101	107	1200000
-Parameters
-
-look_back: Number of past days used for prediction (default: 10)
-
-epochs: Maximum training epochs (default: 10000)
-
-learning_rate: Learning rate (default: 0.001)
-
-hidden_size: Number of neurons in the hidden layer (default: 20)
-
-patience: Early stopping patience (default: 100)
-
-Output
-
-Plots:
-
-Actual vs predicted stock prices
-
-Training and validation loss curves
-
-Saved Models:
-
-nn_model_relu.npz
-
-nn_model_tanh.npz
-
-Performance Metrics printed to console: RMSE and MAE
-
-Key Functions
-
-NeuralNetwork: Feedforward neural network class
-
-min_max_scaler / inverse_min_max_scaler: Scale and inverse-scale data
-
-prepare_data: Prepare input-output sequences with look-back window
-
-train_test_split_manual: Train-validation-test split
-
-load_stock_data: Load CSV data and scale features
-
-compute_metrics: Compute RMSE and MAE
-
-plot_predictions / plot_loss: Visualize results
-
-select_file_gui: GUI-based file selection
-
-Why This Project is Important for a Data Scientist Portfolio
-
-Demonstrates ability to implement neural networks from scratch
-
-Shows time-series prediction skills applied to stock market data
-
-Includes data preprocessing, visualization, and model evaluation
-
-Highlights Python programming and problem-solving skills
-
-License
+numpy
+pandas
+matplotlib
+tkinter     (usually comes with Python on Windows/macOS; on Linux → sudo apt install python3-tk)
