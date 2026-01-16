@@ -96,9 +96,3 @@ These parameters can be modified inside the code.
 
 ---
 
-## How to Run the Project
-
-1. Clone the repository
-   ```bash
-   git clone <repository-url>
-   cd <repository-folder>
